@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bs/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./images/bookstore_logo.png">
+        <title>BookPalace | Products</title>
+    </head>
+
+    <body class="home-body" onload="loadHeader('My Products'); loadFooter(); loadMyProducts();">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="header" class="sticky-lg-top" style="margin: 0%; padding: 0%;"></div>
+
+
+                <!-- content -->
+                <div class="offset-1 col-10 bg-black bg-opacity-25 rounded my-3 p-3">
+                    <!-- cheader -->
+                    <div class="col-12 rounded mt-2 p-2" style="background-color: rgb(54, 69, 79);">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4 mt-1 mb-1 text-center">
+
+                                        <img src="images/gamer.png" width="90px" height="90px"
+                                             class="rounded-circle">
+
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row text-center text-lg-start">
+                                            <div class="col-12 mt-0 mt-lg-4">
+                                                <span class="text-white fw-bold fs-5" id="name">Name</span>
+                                            </div>
+                                            <div class="col-12">
+                                                <span class="text-white-50 fw-bold fs-5" id="email">email</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-12 col-lg-10 mt-2 mt-lg-4">
+                                        <h1 class="offset-4 offset-lg-2 text-white fw-bold">Products</h1>
+                                    </div>
+                                    <div class="col-12 col-lg-2 mt-lg-4 d-flx">
+                                        <div class="col-12 d-grid">
+                                            <a href="add-product.html" class="btn btn-warning">Add Product</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cheader -->
+                    <!-- cbody -->
+                    <div class="col-12 p-3">
+                        <div class="row">
+                            <!-- filter -->
+                            <!--                            <div class="col-12 col-lg-2  my-3 border border-success rounded-start">
+                                                            <div class="row">
+                                                                <div class="col-12 mt-3 fs-5">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <label class="form-label fw-bold fs-4 text-black">Sort Products</label>
+                                                                        </div>
+                                                                        <div class="col-11">
+                                                                            <div class="row">
+                                                                                <div class="col-10">
+                                                                                    <input type="text" id="s" placeholder="Search...."
+                                                                                           class="form-control  border-0 bg-transparent text-black-50">
+                                                                                </div>
+                                                                                <div class="col-1 p-1">
+                                                                                    <label class="form-label"><i class="bi bi-search fs-5"></i></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 mt-3">
+                                                                            <label class="form-label text-black fw-bold">Added Time</label>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <hr style="width: 80%;">
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="n" name="r1">
+                                                                                <label class="form-check-label text-black" for="n">
+                                                                                    Newest to oldest
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="o" name="r1">
+                                                                                <label class="form-check-label text-black" for="o">
+                                                                                    Oldest to newest
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 mt-3">
+                                                                            <label class="form-label text-black fw-bold">By quantity</label>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <hr style="width: 80%;">
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="h" name="r2">
+                                                                                <label class="form-check-label text-black" for="h">
+                                                                                    Hight to low
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="l" name="r2">
+                                                                                <label class="form-check-label text-black" for="l">
+                                                                                    Low to high
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 mt-3">
+                                                                            <label class="form-label text-black fw-bold">By Condition</label>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <hr style="width: 80%;">
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="p" name="r3">
+                                                                                <label class="form-check-label text-black" for="p">
+                                                                                    New
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input bg-black bg-opacity-50 border-white"
+                                                                                       type="radio" id="c" name="r3">
+                                                                                <label class="form-check-label text-black" for="c">
+                                                                                    Used
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 text-center mt-3 mb-3">
+                                                                            <div class="row g-2">
+                                                                                <div class="col-12 col-lg-6 d-grid">
+                                                                                    <button class="btn btn-success fw-bold"
+                                                                                            onclick="sort1(0);">Sort</button>
+                                                                                </div>
+                                                                                <div class="col-12 col-lg-6 d-grid">
+                                                                                    <button class="btn btn-primary fw-bold"
+                                                                                            onclick="clearSort();">Clear</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
+                            <!-- filter -->
+                            <!-- product -->
+                            <div class="col-12 mt-3 mb-3 border border-success rounded-end">
+                                <div class="row" id="my-products">
+                                    <div class="col-12 ">
+                                        <div class="row justify-content-around gap-1">
+
+
+                                            <!-- card -->
+                                            <div id="product-template" class="mb-3 mt-3 col-12 col-lg-6 border-0">
+                                                <div class="card col-12 border-0"
+                                                     style="background-color: rgb(54, 69, 79);">
+                                                    <div class="row">           
+                                                        <div class="col-md-3 py-1 d-flx">
+                                                            <img id="image" src="images/bookStoreHS.jpg" class="rounded contain-image hvrOn"
+                                                                 style="width: 95%; height: 100%;">
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="card-body mt-2">
+                                                                <span id="name" class="fs-3 fw-bolder text-info">Book Name</span><br>
+                                                                <span id="author" class="fs-6 fw-bold opacity-75">By.
+                                                                    Author</span><br>
+                                                                <span id="genre-age" class="fs-6 fw-bold">Fantasy | PG-13</span><br>
+                                                                <span id="price" class="card-text fw-bold fs-4 text-warning">Rs.
+                                                                    1000.00</span><br>
+                                                                <div class="form-check form-switch mt-2">
+                                                                    <label class="form-check-label fw-bold" for="status" id="status-label">
+                                                                        Activate Your Product
+                                                                    </label>
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           role="switch" id="status" onchange="" disabled />
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="row g-1">
+                                                                            <!--                                                                        <div class="col-12 col-lg-6 d-grid">
+                                                                                                                                                        <button class="btn btn-success fw-bold"
+                                                                                                                                                                onclick="sendId();">Update</button>
+                                                                                                                                                    </div>-->
+                                                                            <div class="col-12 d-grid">
+                                                                                <button class="btn btn-danger fw-bold"
+                                                                                        id="remove">Delete</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card -->
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <!-- product -->
+                            <!-- pagination -->
+                            <div id="page-container" class="col-12 d-flex justify-content-center align-items-center gap-2">
+                                <button onclick="reLoadProducts(false)" id="btn-prev" class="btn btn-primary rounded-circle"><b><</b></button>
+                                <b class="text-primary" id="page-number">1</b> <span >out of</span><span id="page-count">5</span>
+                                <button onclick="reLoadProducts(true)" id="btn-nxt" class="btn btn-primary rounded-circle"><b>></b></button>
+                            </div>
+                        </div> 
+                        <!-- pagination -->
+                    </div>
+                    <!-- cbody -->
+                </div>
+                <!-- content -->
+                <div id="footer" style="margin: 0%; padding: 0%;"></div>
+            </div>
+        </div>
+
+        <script src="bs/bootstrap.bundle.js"></script>
+        <script src="js/loadfh.js"></script>
+        <script src="js/my-profile.js"></script>
+    </body>
+
+</html>
+<!-- Mohamed Hanas Abdur Rahman | @nxt.genar7@gmail.com | hssxar7 -->

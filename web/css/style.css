@@ -1,0 +1,314 @@
+/* fonts */
+
+@font-face {
+    font-family: "GW";
+    src: url("../fonts/Ahsing-Regular.otf");
+}
+
+
+/* fonts */
+
+* {
+    font-size: 14px;
+    color: antiquewhite;
+    font-family: "arial";
+}
+
+body {
+    /* overflow-x: hidden; */
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+/* bs */
+/* .dropdown-menu > li > a:hover {
+    background-image: none;
+    background-color: red;
+} */
+/* .opt:hover {
+    background-image: none !important;
+    background-color: red !important;
+} */
+
+/* .pagination a {
+    background-color: rgb(177, 12, 12);
+    border: none;
+    color: #7d4e4e;
+}
+
+
+.pagination a:hover,
+.pagination .active a {
+    background-color: rgb(86, 5, 5);
+    border: none;
+    color: #ffffff;
+} */
+
+/* .custom-popover {
+    --bs-popover-max-width: 400px;
+    --bs-popover-border-color: var(--bs-danger);
+    --bs-popover-header-bg: var(--bs-danger);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  } */
+
+   /* .nav-link.active{
+    background-color: rgb(86, 5, 5) !important;
+    color: #ffffff !important;
+    border: 1px solid rgb(220, 53, 69) !important;
+  }
+
+  .nav-link{
+    background-color: rgb(45, 4, 4) !important;
+    border: none !important;
+    color: #ffffff !important;
+  } */
+
+
+  /* ::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(200,200,200,1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:#343232;
+    -webkit-box-shadow: inset 0 0 6px rgba(90,90,90,0.7); */
+/* } */
+
+
+/* bs */
+
+/* log */
+
+.log-bg {
+    background-image: url("../images/book_store_fp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.hgh{
+    height: 115px !important; 
+    border-radius: 5px 0 0 5px !important; 
+}
+.hghAd{
+    height: 135px !important; 
+    border-radius: 5px 0 0 5px !important; 
+}
+.hghImg{
+    height: 190px !important; 
+    border-radius: 5px 0 0 5px !important; 
+}
+.hghWish{
+    height: 240px !important; 
+    border-radius: 5px 0 0 5px !important; 
+}
+
+.singleP{
+    height:458px !important;
+}
+
+.welcomeTxt {
+    text-align: center;
+    font-family: "GW";
+    font-size: 5rem;
+    opacity: 0.7;
+}
+
+.welcomePara {
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0.6;
+    padding-inline: 10%;
+}
+
+@media only screen and (max-width: 1000px){
+    .log-bg {
+        background-image: url("../images/book_store_fp.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-y;
+    }
+
+    .hgh{
+        height:200px !important;
+        border-radius: 5px 5px 0 0 !important; 
+    }
+    .hghAd{
+        height:200px !important;
+        border-radius: 5px 5px 0 0 !important; 
+    }
+    .hghImg{
+        height:200px !important;
+        border-radius: 5px 5px 0 0 !important; 
+    }
+    .hghWish{
+        height:200px !important;
+    }
+    .singleP{
+        height:630px !important;
+    }
+
+    .welcomeTxt {
+        text-align: start !important;
+        font-family: "GW";
+        font-size: 3rem;
+        opacity: 0.7;
+    }
+
+    .welcomePara {
+        text-align: start !important;
+        font-size: 1rem;
+        opacity: 0.6;
+        padding-inline: 0%;
+    }
+}
+
+
+.gamepad {
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-1px -1px 1px rgb(97, 1, 1));
+}
+
+.bgi {
+    background-image: url("resources/bgi.png");
+    height: 65vh;
+    /* transform: scaleX(-1); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dis3 {
+    transition: 4s ease;
+    opacity: 0;
+}
+
+
+/* log */
+
+.home-body {
+   background-color: rgb(211, 211, 211)!important;
+    /* background-image: linear-gradient(90deg, rgb(26, 0, 0), #3e0000, #670808, #3e0000, rgb(26, 0, 0)); */
+}
+
+.gw-iconText {
+    text-align: start;
+    font-family: "GW";
+    font-size: 1rem;
+}
+
+.cart-icon {
+    background-image: url("../images/cart.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 35px;
+    opacity: 0.7;
+}
+
+.hvr:hover {
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 1 !important;
+}
+.shake:hover {
+    transform: translate(1px,1px);
+}
+
+.sr:hover {
+    cursor: pointer;
+    color: rgb(64, 224, 208);
+    opacity: 1 !important;
+}
+
+.hc:hover {
+    cursor: pointer;
+    color: orange;
+    opacity: 1 !important;
+}
+.so:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    opacity: 1 !important;
+}
+
+.search:hover {
+    border: 1px solid rgb(118, 167, 34) !important;
+}
+
+.hvrOn:hover{
+    cursor: pointer;
+    border: 1px solid rgb(118, 167, 34) !important;
+}
+
+.contain-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cover-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.d-flx{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;    
+}
+
+.hi{
+    background-image: linear-gradient(90deg, rgb(160, 10, 10), rgb(72, 3, 3));
+}
+
+.pm{
+    height: 65px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pm1{
+    background-image: url("resources/payment_method/visa_img.png");
+}
+
+.pm2{
+    background-image: url("resources/payment_method/mastercard_img.png");
+}
+
+.pm3{
+    background-image: url("resources/payment_method/american_express_img.png");
+}
+
+.pm4{
+    background-image: url("resources/payment_method/paypal_img.png");
+}
+
+.of{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.message_box,
+.chat_box{
+    height: 410px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

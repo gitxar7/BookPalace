@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bs/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./images/bookstore_logo.png">
+        <title>BookPalace | Profile</title>
+    </head>
+
+    <body class="home-body" onload="loadHeader('My Profile'); loadFooter(); loadMyProfile();">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="header" class="sticky-lg-top" style="margin: 0%; padding: 0%;"></div>
+
+                <div class="col-12 my-3">
+                    <div class="row">
+
+                        <div class="col-12 bg-bg-transparent rounded mt-2 mb-4">
+                            <div class="row g-2">
+
+                                <div class="col-md-3 ">
+                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+
+                                        <img src="images/gamer.png" class="rounded mt-5"
+                                             style="width: 150px;" id="vwImg" />
+
+
+
+                                        <span id="my-name" class="fw-bold text-black">name</span>
+                                        <span id="my-email" class="fw-bold text-black-50">email</span>
+
+                                        <!-- <input type="file" class="d-none" id="profileImg" accept="image/*">
+                                        <label for="profileImg" class="btn btn-primary mt-5" onclick="">Add your
+                                            address</label> -->
+                                        <button class="btn btn-primary mt-3" onclick="openModel();">Add your
+                                            address</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 ">
+                                    <div class="p-3 py-5">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4 class="fw-bold text-black">Profile Settings</h4>
+                                        </div>
+
+                                        <div class="row mt-4">
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Name</label>
+                                                <input type="text" id="name"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Password</label>
+                                                <div class="input-group">
+                                                    <input id="password" type="password"
+                                                           class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                           value="" readonly />
+                                                    <span class="input-group-text bg-body bg-opacity-50 border-0"
+                                                          id="basic-addon2">
+                                                        <i class="bi bi-eye-slash-fill text-white"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Email</label>
+                                                <input id="email" type="text"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       readonly value="" />
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Registered Date</label>
+                                                <input id="date" type="text"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       readonly value=""/>
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Mobile</label>
+                                                <input type="text" id="mobile"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label class="form-label text-black">City</label>
+                                                <input type="text" id="city"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label text-black">Postal Code</label>
+                                                <input type="text" id="postal"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Line 01</label>
+                                                <input type="text" id="line1"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label text-black">Line 02</label>
+                                                <input type="text" id="line2"
+                                                       class="form-control bg-body bg-opacity-25 text-black-50 border-0"
+                                                       value="" readonly/>
+                                            </div>
+
+                                            <!-- <div class="col-12 d-grid mt-3">
+                                                <button class="btn btn-primary" onclick="updProfile();" id="umpBtn">Update
+                                                    My Profile</button>
+                                            </div>
+                                            <div class="col-12 d-grid mt-3 text-black">
+                                                <span><b>Note:</b>You can not update password, email, gender and registered
+                                                    date
+                                                    if you want to update password, you can go to <a href="index.php"
+                                                        class="text-decoration-none">Sign in page</a>
+                                                    and if you want to update email, you can do it by requesting an admin by
+                                                    going to <a href="hc.php" class="text-decoration-none">h&c page</a>.
+                                                </span>
+                                            </div> -->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 text-center gap-2">
+                                    <div class="row">
+                                        <span class="fw-bold text-white-50 mt-5">Display ads</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- modal -->
+
+                        <div class="modal bg-black bg-opacity-25" tabindex="-1" id="forgotPasswordModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-black">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Add Your Address</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row g-3">
+
+                                            <div class="col-12">
+                                                <span id="error-message" class="text-danger"></span>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Line 01</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control bg-transparent text-light"
+                                                           id="add-line1" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Line 02</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control bg-transparent text-light"
+                                                           id="add-line2" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label class="form-label">City</label>
+                                                <div class="input-group mb-3">
+                                                    <Select id="city-select" class="form-control bg-transparent text-light">
+                                                        <option class="bg-black bg-opacity-50" value="0">
+                                                            Select Your City</option>
+                                                    </Select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label class="form-label">Postal Code</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control bg-transparent text-light"
+                                                           id="add-postal" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" onclick="addAddress();">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- modal -->
+
+                    </div>
+                </div>
+
+
+                <div id="footer" style="margin: 0%; padding: 0%;"></div>
+            </div>
+        </div>
+
+        <script src="bs/bootstrap.bundle.js"></script>
+        <script src="js/loadfh.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/my-profile.js"></script>
+    </body>
+
+</html>
+<!-- Mohamed Hanas Abdur Rahman | @nxt.genar7@gmail.com | hssxar7 -->

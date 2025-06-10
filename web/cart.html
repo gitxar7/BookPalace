@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bs/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./images/bookstore_logo.png">
+        <title>BookPalace | Cart</title>
+    </head>
+
+    <body class="home-body" onload="loadHeader('Cart'); loadFooter(); loadCartItems()">
+        <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="header" class="sticky-lg-top" style="margin: 0%; padding: 0%;"></div>
+
+
+                <!-- content -->
+                <div class="offset-1 col-10 bg-black bg-opacity-25 rounded my-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="form-label fs-1 fw-bolder"><i class="bi bi-cart4 text-success fs-1"></i></label>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <hr>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="offset-lg-2 col-12 col-lg-6 mb-3">
+                                    <input type="text" class="form-control border-0" placeholder="Search in Cart..."
+                                           style="background-color: rgb(211, 211, 211);">
+                                </div>
+                                <div class="col-12 col-lg-2 d-grid mb-3">
+                                    <button class="btn search text-white"
+                                            style="background-color: rgb(85, 107, 47);">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <hr>
+                        </div>
+
+                        <!-- Empty View -->
+                        <div class="col-12" id="empty-cart">
+
+                        </div>
+                        <!-- Empty View -->
+
+                        <!-- products -->
+                        <div class="col-12 col-lg-8 ms-lg-5">
+                            <div class="row">
+                                <div id="remove-all-cart" class="">
+                                    <button onclick="removeCartItem(0,'all')" class="btn btn-danger mb-2">Empty Cart
+                                        <i class="bi bi-trash3-fill text-white"></i>
+                                    </button>
+                                </div>
+                                <div class="col-12" id="cart-item-container">
+
+                                    <div id="cart-item" class="card mb-3 mx-0 col-12 border-0" style="background-color: rgb(54, 69, 79);">
+                                        <div class="row g-0">
+                                            <div class="col-md-12 mt-3 mb-3">
+                                                <div class="row">
+                                                    <div class="col-12 ms-3">
+                                                        <span class="fw-bold text-white-50 fs-5">Seller : </span>&nbsp;
+                                                        <span class="fw-bold text-white-50 fs-5" id="seller-name">
+                                                        </span>&nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <a id="image-cover" class="col-md-4 hghImg" href="single-product-view.html?pid=3">
+                                                <div id="image" class="cover-image col-8 mx-auto rounded hvrOn"
+                                                     style="height:100%; background-image: url('ProductCoverImages/4.png')"
+                                                     data-bs-custom-class="custom-popover" tabindex="0" data-bs-toggle="popover"
+                                                     data-bs-trigger="hover focus"
+                                                     data-bs-content="vccvc">
+                                                </div>
+                                            </a>
+                                            <div class="col-md-5">
+                                                <div class="card-body">
+
+                                                    <span id="name" class="fs-2 fw-bold text-info">
+                                                        Name
+                                                    </span> <br>
+                                                    <span id="author" class="fs-5 text-white-50">
+                                                        by. Author
+                                                    </span> &nbsp;
+                                                    <span id="isbn" class="fs-5 text-white-50">
+                                                        ISBN: 12458
+                                                    </span> <br>
+
+                                                    <span id="genre-age" class=" text-white-50 fs-5">Fantasy | PG-13</span>&nbsp;
+                                                    <span class=" text-white-50 fs-5"></span>
+                                                    <br>
+                                                    <span class="fw-bold text-warning fs-5">Price :</span>&nbsp;
+                                                    <span id="price" class="fw-bold text-warning fs-5">Rs. 1000.00
+                                                    </span>
+                                                    <br>
+                                                    <br>
+                                                    <span class="text-white-50">
+                                                        +5% service charge applies.
+                                                    </span>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card-body d-grid">
+                                                    <!--                                                <a id="buy-btn" class="btn btn-outline-success mb-2" href="">Buy
+                                                                                                        Now</a>-->
+                                                    <a id="remove-btn" class="btn btn-outline-warning mb-2" href="">-</a>
+                                                    <a id="add-btn" class="btn btn-outline-success mb-2" href="">+</a>
+                                                    <a id="remove-all-btn" class="btn btn-outline-danger mb-2" href="">Remove All</a>
+                                                </div>
+                                            </div>
+
+                                            <hr class="col-md-12 mt-3">
+
+                                            <div class="col-md-12 mb-3">
+                                                <div class="row">
+                                                    <div class="col-6 col-md-6">
+                                                        <span id="rq" class="fw-bold fs-5 text-white-50 ms-3">Requested Total <i
+                                                                class="bi bi-info-circle"></i></span>
+                                                    </div>
+                                                    <div class="col-6 col-md-6 text-end">
+                                                        <span id="rq-total" class="fw-bold fs-5 text-white-50 me-3">Rs.
+                                                            .00
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--                                <div class="col-12 d-flex justify-content-end mb-2">
+                                                                    <a class="btn btn-danger mb-2" href="">Empty Cart</a>
+                                                                </div>-->
+
+                            </div>
+                        </div>
+                        <!-- products -->
+                        <!-- summary -->
+                        <div class="col-12 col-lg-3" id="cart-summary">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <label class="form-label fs-3 fw-bold text-black">Summary</label>
+                                </div>
+
+                                <div class="col-12">
+                                    <hr />
+                                </div>
+
+                                <div class="col-6 mb-3">
+                                    <span class="fs-6 fw-bold text-black" id="items">Items ()
+                                    </span>
+                                </div>
+
+
+                                <div class="col-6 text-end mb-3">
+                                    <span class="fs-6 fw-bold text-black" id="items-price">Rs.
+                                        .00
+                                    </span>
+                                </div>
+
+                                <div class="col-7 mb-3">
+                                    <span class="fs-6 fw-bold text-black">Service Charge(5%)</span>
+                                </div>
+
+                                <div class="col-5 text-end mb-3">
+                                    <span class="fs-6 fw-bold text-black" id="sc-price">Rs.
+                                        .00
+                                    </span>
+                                </div>
+                                <!--                                <div class="col-7">
+                                                                    <span class="fs-6 fw-bold text-black" id="delivery-city">Delivery(City)</span>
+                                                                </div>
+                                
+                                                                <div class="col-5 text-end">
+                                                                    <span class="fs-6 fw-bold text-black" id="delivery-price">Rs.
+                                                                        .00
+                                                                    </span>
+                                                                </div>-->
+
+                                <div class="col-12 mt-3">
+                                    <hr />
+                                </div>
+
+                                <div class="col-6 mt-2">
+                                    <span class="fw-bolder text-black" style="font-size: 17px;">Total</span>
+                                </div>
+
+                                <div class="col-6 mt-2 text-end">
+                                    <span class="fw-bolder text-black" style="font-size: 17px;" id="total-price">Rs.
+                                        .00
+                                    </span>
+                                </div>
+
+                                <div class="col-12 mt-3 mb-3 d-grid">
+                                    <button id="checkout" class="btn btn-primary fs-5 fw-bold" onclick="openModel(); loadData();">CHECKOUT</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- summary -->
+
+
+
+
+                    </div>
+                </div>
+                <!-- content -->
+
+                <!-- modal -->
+
+                <div class="modal bg-black bg-opacity-25" tabindex="-1" id="forgotPasswordModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-black">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Payment Confirmation</h5>
+                                <!--<p class="" id="name">name</p>-->
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row g-3">
+
+                                    <div class="col-12">
+                                        <span id="error-message" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="1" class="fw-bold">Quantity: </span>
+                                        <span id="qty" class="">100</span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="2" class="fw-bold">Subtotal: </span>
+                                        <span id="sub-total" class="">1000</span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="3" class="fw-bold">Service: </span>
+                                        <span id="service" class="">50</span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="4" class="fw-bold">Delivery: </span>
+                                        <span id="delivery" class="">200</span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="5" class="fw-bold">Total: </span>
+                                        <span id="total" class="">1250</span>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-label">Full Name</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control bg-transparent text-light"
+                                                   id="add-name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label">Mobile</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control bg-transparent text-light"
+                                                   id="add-mobile" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Line 01</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control bg-transparent text-light"
+                                                   id="add-line1" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Line 02</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control bg-transparent text-light"
+                                                   id="add-line2" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-label">City</label>
+                                        <div class="input-group mb-3">
+                                            <Select id="city-select" class="form-control bg-transparent text-light">
+
+                                            </Select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="form-label">Postal Code</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control bg-transparent text-light"
+                                                   id="add-postal" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="checkout();">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal -->
+
+                <div id="footer" style="margin: 0%; padding: 0%;"></div>
+            </div>
+        </div>
+
+        <script src="bs/bootstrap.bundle.js"></script>
+        <script src="js/loadfh.js"></script>
+        <script src="js/my-cart.js"></script>
+        <script src="js/checkout.js"></script>
+        <script src="js/common.js"></script>
+        <script>
+                                    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                                    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                                        return new bootstrap.Popover(popoverTriggerEl)
+                                    })
+        </script>
+    </body>
+
+</html>
+<!-- Mohamed Hanas Abdur Rahman | @nxt.genar7@gmail.com | hssxar7 -->

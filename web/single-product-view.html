@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bs/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./images/bookstore_logo.png">
+        <title>BookPalace | Product</title>
+
+    </head>
+
+    <body class="home-body" onload="loadHeader('Product'); loadFooter(); loadProduct()">
+        <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="header" class="sticky-lg-top" style="margin: 0%; padding: 0%;"></div>
+
+                <!-- content -->
+
+                <!-- a -->
+                <div class="offset-1 col-10 my-3">
+                    <div class="row bg-black bg-opacity-25 rounded mb-3 p-2">
+                        <div class="col-12 col-lg-4">
+                            <div class="row">
+                                <div class="col-12 p-1">
+                                    <div id="image" class="col-12 bg-black rounded contain-image bg-opacity-50"
+                                         style="height: 458px; background-image: url('ProductCoverImages/image.png')"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-8 rounded bg-black bg-opacity-50 mt-1 singleP">
+                            <div class="row p-1">
+                                <div class="col-12">
+                                    <div class="row mt-1">
+                                        <!-- <div class="col-12 col-lg-1 d-flx">
+                                            <div class="col-12 bg-light rounded-circle contain-image"
+                                                style="width: 35px; height:35px; background-image: url('resources/manager.png')">
+                                            </div>
+                                        </div> -->
+                                        <div class="col-12 text-center text-lg-start">
+                                            <span id="title" class="fs-4 fw-bold text-info">
+                                                Product Name
+                                            </span>
+                                        </div>
+                                        <div class="col-12 text-center text-lg-start">
+                                            <span id="author" class="fs-6 fw-bold text-white-50">
+                                                By Author
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+
+                                <div class="col-12">
+                                    <span id="description" class="fs-6 fw-bold">
+                                        Dream Soft PVT LTD is a software development company that has 10 years of experience
+                                        in handling local and foreign software projects. They have got an opportunity to bid
+                                        for a new project from True Insurance INC, USA to develop a work flow management
+                                        system.
+                                    </span>
+                                </div>
+
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+
+                                <div class="col-12">
+                                    <span id="price" class="fs-5 fw-bolder text-warning fw-bold">Rs. 100.00
+                                    </span>
+                                </div>
+
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+
+                                <div class="col-6">
+                                    <span class="fs-6 text-white fw-bold">Genre : </span><span id="genre" class="fs-6 fw-bold text-white-50">
+                                        Fantasy</span><br />
+                                </div>
+                                <div class="col-6">
+                                    <span class="fs-6 text-white fw-bold">Age-Rating :
+                                    </span><span id="age" class="fs-6 fw-bold text-white-50">PG-13</span><br />
+                                </div>
+                                <div class="col-6 mt-1">
+                                    <span class="fs-6 text-white fw-bold">ISBN :
+                                    </span><span id="isbn" class="fs-6 fw-bold text-white-50">12453</span><br />
+                                </div>
+                                <div class="col-6 mt-1 fw-bold">
+                                    <span class="fs-6 text-white">Condition :
+                                    </span><span id="condition" class="fs-6 fw-bold text-white-50">New</span><br />
+                                </div>
+
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+                                <div class="col-6">
+                                    <span class="fs-6 text-white fw-bold">Seller :
+                                    </span><span id="seller" class="fs-6 fw-bold text-white-50">Peter Parker</span><br />
+                                </div>
+                                <div class="col-6 d-none">
+                                    <span class="fs-6 text-white fw-bold">Sold :
+                                    </span><span class="fs-6 fw-bold text-white-50">01 Items</span><br />
+                                </div>
+                                <div class="col-6 mt-1">
+                                    <span class="fs-6 text-white fw-bold">
+                                        Available Quantity :
+                                    </span><span id="qty" class="fs-6 fw-bold text-white-50">25</span><br />
+                                </div>
+
+                                <div class="col-6 mt-1">
+                                    <span class="fs-6 text-white fw-bold">
+                                        Added Date :
+                                    </span><span id="date" class="fs-6 fw-bold text-white-50">2024-10-04 12:26 PM</span><br />
+                                </div>
+
+                                <div class="col-12">
+                                    <hr>
+                                </div>
+
+                                <div class="col-12 mb-2">
+                                    <span class="fs-6 fw-bold text-white-50"><span class="fs-6 text-white">
+                                            Offers :
+                                        </span>Unavailable for this product</span><br />
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" id="cart-qty"
+                                                   class="text-black form-control border-0"
+                                                   style="background-color: rgb(211, 211, 211);" value="1" />
+                                        </div>
+                                        <div class="col-6 mb-1 mb-lg-0 d-grid">
+                                            <button id="add-to-cart" class="btn btn-primary">Add To
+                                                Cart</button>
+                                        </div>
+                                        <!-- <div class="col-12 col-lg-4 mb-1 mb-lg-0 d-grid">
+    
+                                            <button class="btn btn-secondary hvrW  d-grid col-12" title="Added to Wishlist"
+                                                onclick='addToWishlist();'>🤍</button>
+    
+                                            <button class="btn btn-outline-secondary hvrW  d-grid col-12"
+                                                title="Add to Wishlist" onclick='addToWishlist();'>🤍</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- a -->
+
+                <!-- b -->
+                <div class="offset-1 col-10">
+                    <div class="row bg-black bg-opacity-25 rounded mb-3 p-2">
+                        <div class="col-12">
+                            <div class="row d-block me-0 mt-4 mb-3 border-bottom border-1 border-dark">
+                                <div class="col-12">
+                                    <span class="fs-3 fw-bold text-black">Related Items</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row d-flx" id="similar-product-main">
+
+                                <div id="similar-product" class="" >
+                                    <div class="bg-body bg-opacity-10 rounded-4 hvrOn" style="height: 272px; width: 200px;">
+                                        <a href='' id="sp-link">
+                                            <div class="col-12 px-1 py-1" style="height: 200px;">
+                                                <div id="sp-image" class="contain-image bg-black bg-opacity-50 col-12 mx-auto rounded"
+                                                     style="height: 195px;  background-image: url('resources/bookStoreHS.jpg')">
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class=" col-12" style="height: 25px;">
+                                            <p id="sp-name" class="col-12 fs-5 fw-bolder text-center text-black mx-auto">
+                                                Name
+                                            </p>
+                                        </div>
+
+                                        <div class="col-12 d-grid pt-2 px-1" style="height: 30px;">
+                                            <button id="sp-btn" class="btn btn-outline-secondary">Add To Cart</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- b -->
+                <!-- c -->
+                <!-- <div class="offset-1 col-10">
+                    <div class="row bg-black bg-opacity-25 rounded mb-3 p-2">
+    
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row d-block me-0 mt-4 mb-3 border-bottom border-1 border-dark">
+                                        <div class="col-12">
+                                            <span class="fs-4 fw-bold">Product Details</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <b class="text-white fs-5">Categories:</b>
+    
+                                        <span class="text-white-50 fs-5">
+                                            name
+                                        </span> &nbsp;
+                                    </div>
+    
+                                    <div class="col-12 col-lg-4">
+                                        <b class="text-white fs-5">Supporting Platforms:</b>
+                                        <span class="text-white-50 fs-5"> platform
+                                        </span> &nbsp;
+                                    </div>
+    
+                                    <div class="col-12 col-lg-4">
+                                        <b class="text-white fs-5">Product Brand:</b>
+                                        <span class="text-white-50 fs-5">
+                                            brand
+                                        </span>
+                                    </div>
+    
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label class="form-label fs-5 fw-bold">Description : </label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <textarea cols="60" rows="10"
+                                                            class="form-control border-0 bg-black bg-opacity-25 text-white-50 fs-5"
+                                                            readonly></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- c -->
+                <!-- content -->
+            </div>
+        </div>
+        <div id="footer" style="margin: 0%; padding: 0%;"></div>
+    </div>
+
+    <script src="bs/bootstrap.bundle.js"></script>
+    <script src="js/loadfh.js"></script>
+    <script src="js/single-product.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
+<!-- Mohamed Hanas Abdur Rahman | @nxt.genar7@gmail.com | hssxar7 -->
