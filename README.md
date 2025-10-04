@@ -1,6 +1,8 @@
-# BookPalace - Online Book Store Platform
+
 
 <div align="center">
+
+# BookPalace - Online Book Store Platform
   
   ![BookPalace Logo](web/images/bookstore_logo.png)
   
