@@ -206,6 +206,7 @@ This project showcases proficiency in:
 **Abdur Rahman Hanas**
 
 - GitHub: [@gitxar7](https://github.com/gitxar7)
+- Email: nxt.genar7@gmail.com
 - Project: [BookPalace](https://github.com/gitxar7/BookPalace)
 
 ## License
